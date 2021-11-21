@@ -1,61 +1,97 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h1 align="center">Karirpad Backend Test</h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Built with PHP using the <a href="https://laravel.com/">Laravel</a> Framework.<br/>
 
-## About Laravel
+Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things..</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Contents
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Description](#description)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- [Requirements](#requirements)
 
-## Learning Laravel
+- [Installation](#installation)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- [Endpoint](#endpoint)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- [Documentation](#documentation)
 
-## Laravel Sponsors
+- [Related Project](#related-project)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Description
 
-### Premium Partners
+This is RESTful api design for
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+[`Karirpad Backend Test`](https://github.com/dhiyo7/Karirpad-BE).
 
-## Contributing
+Built withPHP, using Laravel framework and other libraries.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Requirements
 
-## Code of Conduct
+- [`PHP 7`](https://www.php.net/)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- [`Composer`](https://getcomposer.org/)
 
-## Security Vulnerabilities
+- [`Laravel`](https://laravel.com/)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- [`Postman`](https://www.postman.com/downloads/)
 
-## License
+- [`MySql`](https://remotemysql.com/phpmyadmin/index.php)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Installation
+
+1. Open your terminal or command prompt
+
+2. Type `git clone https://github.com/dhiyo7/Karirpad-BE.git`
+
+3. Open the folder and type `composer update` for install dependencies
+
+4. Register an account or create new database
+
+5. Create file **_.env_** in root folder with the following contents :
+
+```bash
+DB_CONNECTION=mysql
+
+DB_HOST=127.0.0.1
+
+DB_PORT=3306
+
+DB_DATABASE=namedatabase
+
+DB_USERNAME=usernamedb
+
+DB_PASSWORD=passwddb
+```
+
+1. Type `php artisan server` in terminal for run this backend.
+
+## Endpoint
+
+### BaseURL
+
+```bash
+https://karirpad-test-backend.herokuapp.com
+```
+
+### Category Router
+
+**Used for suplyind data of category**
+
+| No  | Method | Endpoint           | Header                    | Info                  |
+|:---:|:------:|:------------------:|:-------------------------:|:---------------------:|
+| 1   | POST   | /api/category      | Accept : application/json | Create new Category   |
+| 2   | PUT    | /api/category/{id} | Accept : application/json | Edit Category         |
+| 3   | GET    | /api/category      | Accept : application/json | Show list of category |
+| 4   | DELETE | /api/category/{id} | Accept : application/json | Delete category       |
+
+### Stuff Router
+
+**Used for supplying data of all stuff**
+
+| No  | Method | Endpoint        | Header                    | Info               |
+|:---:|:------:|:---------------:|:-------------------------:|:------------------:|
+| 1   | POST   | /api/stuff      | Accept : application/json | Create new Stuff   |
+| 2   | PUT    | /api/stuff/{id} | Accept : application/json | Edit Stuff         |
+| 3   | GET    | /api/stuff      | Accept : application/json | Show list of stuff |
+| 4   | DELETE | /api/stuff/{id} | Accept : application/json | Delete stuff       |
